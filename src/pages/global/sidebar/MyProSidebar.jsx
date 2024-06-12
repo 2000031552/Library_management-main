@@ -190,7 +190,7 @@ const MyProSidebar = () => {
               title="Invoices Balances"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
-              selected={selected}
+              selected={selected}  
               setSelected={setSelected}
             />
 
