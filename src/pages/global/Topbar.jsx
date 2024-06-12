@@ -1,7 +1,8 @@
 import React from "react";
 import { useContext,useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ColorModeContext, tokens } from "../../theme";
-import { useTheme, Box, IconButton, InputBase,Menu, MenuItem } from "@mui/material";
+import { useTheme, Box, IconButton, InputBase,Menu, MenuItem, TextField } from "@mui/material";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
@@ -15,6 +16,8 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   const [anchorEl, setAnchorEl] = useState(null);
+  const { toggleSidebar, broken, rtl } = useProSidebar();
+  const navigate = useNavigate();
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -22,7 +25,10 @@ const Topbar = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-  const { toggleSidebar, broken, rtl } = useProSidebar();
+  const handleChangePasswordClick = () => {
+    navigate("/change-password");
+    handleMenuClose();
+  }
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -80,7 +86,8 @@ const Topbar = () => {
         onClose={handleMenuClose}
       >
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleMenuClose}>Change Password</MenuItem>
+        <MenuItem onClick={handleChangePasswordClick}>Change Password</MenuItem>
+        
         <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
       </Menu>
     </Box>

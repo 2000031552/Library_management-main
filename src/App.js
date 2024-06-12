@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { MyProSidebarProvider } from "./pages/global/sidebar/sidebarContext";
 
 import Topbar from "./pages/global/Topbar";
-
+import ChangePassword from "./pages/changePassword";
 import Dashboard from "./pages/dashboard";
 import Team from "./pages/team";
 import Invoices from "./pages/invoices";
@@ -27,6 +27,7 @@ const App = () => {
               <Topbar />
               <Routes>
                 <Route path="/" element={<Dashboard />} />
+                <Route path="/change-password" element={<ChangePassword />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
