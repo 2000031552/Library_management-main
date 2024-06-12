@@ -11,7 +11,7 @@ import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import BookIcon from '@mui/icons-material/Book';
- 
+import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import GroupIcon from '@mui/icons-material/Group';
@@ -130,11 +130,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="1,325,134"
-              subtitle="Borrowal Requests"
+              subtitle="Requests"
               progress="0.80"
               increase="+43%"
               icon={
-                <TrafficIcon
+                <RequestQuoteOutlinedIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
