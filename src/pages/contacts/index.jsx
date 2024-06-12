@@ -17,7 +17,7 @@ const Contacts = () => {
       field: "name",
       headerName: "BookTitle",
       cellClassName: "name-column--cell",
-      width: 200,
+      width: 150,
     },
     { field: "author", headerName: "Author", width: 100 },
     { field: "genre", headerName: "Genre", width: 100 },
@@ -25,7 +25,7 @@ const Contacts = () => {
     
   ];
   return (
-    <Box m="20px">
+    <Box m="16px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="Books" subtitle="welcome!" />
       </Box>
