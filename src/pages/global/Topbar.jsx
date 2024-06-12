@@ -1,7 +1,7 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import { useTheme, Box, IconButton, InputBase } from "@mui/material";
+import { useTheme, Box, IconButton, InputBase,Menu, MenuItem } from "@mui/material";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
@@ -14,6 +14,14 @@ const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
   const { toggleSidebar, broken, rtl } = useProSidebar();
 
   return (
@@ -54,7 +62,7 @@ const Topbar = () => {
         <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={handleMenuOpen}>
           <PersonOutlinedIcon />
         </IconButton>
         {broken && rtl && (
@@ -66,6 +74,15 @@ const Topbar = () => {
           </IconButton>
         )}
       </Box>
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleMenuClose}
+      >
+        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Change Password</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+      </Menu>
     </Box>
   );
 };
