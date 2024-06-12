@@ -20,6 +20,7 @@ const Contacts = () => {
       width: 200,
     },
     { field: "author", headerName: "Author", width: 100 },
+    { field: "genre", headerName: "Genre", width: 100 },
     { field: "publisheddate", headerName: "PublishedDate", width: 100,type: date },
     
   ];

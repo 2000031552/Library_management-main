@@ -82,6 +82,7 @@ export const mockDataContacts = [
     name: "Harry potter",
     author : "J K Rowling",
     publisheddate : "03/12/2022",
+    genre:"Lifestyle",
     ISBN: 123512
   },
   {
