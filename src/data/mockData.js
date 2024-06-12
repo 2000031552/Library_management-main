@@ -78,9 +78,7 @@ export const mockDataTeam = [
 export const mockDataContacts = [
   {
     id: 1,
-    
     name: "Harry potter",
-    
     author : "J K Rowling",
     publisheddate : 1998-8-7,
     ISBN: 123512
