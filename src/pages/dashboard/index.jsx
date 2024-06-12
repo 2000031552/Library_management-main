@@ -10,10 +10,11 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
+import BookIcon from '@mui/icons-material/Book';
+ 
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
+import GroupIcon from '@mui/icons-material/Group';
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -66,11 +67,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="12,361"
-              subtitle="Emails Sent"
+              subtitle="Members"
               progress="0.75"
               increase="+14%"
               icon={
-                <EmailIcon
+                <GroupIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
@@ -87,11 +88,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="431,225"
-              subtitle="Sales Obtained"
+              subtitle="Available books"
               progress="0.50"
               increase="+21%"
               icon={
-                <PointOfSaleIcon
+                <BookIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
@@ -108,7 +109,7 @@ const Dashboard = () => {
           >
             <StatBox
               title="32,441"
-              subtitle="New Clients"
+              subtitle="New users"
               progress="0.30"
               increase="+5%"
               icon={
@@ -129,7 +130,7 @@ const Dashboard = () => {
           >
             <StatBox
               title="1,325,134"
-              subtitle="Traffic Received"
+              subtitle="Borrowal Requests"
               progress="0.80"
               increase="+43%"
               icon={
