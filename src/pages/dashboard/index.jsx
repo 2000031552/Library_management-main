@@ -16,7 +16,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import GroupIcon from '@mui/icons-material/Group';
 import Header from "../../components/Header";
-import LineChart from "../../components/LineChart";
+import RecentlyAddedBooks from "../../components/RecentlyAddedBooks";
 import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
@@ -185,7 +185,7 @@ const Dashboard = () => {
                 </Box>
               </Box>
               <Box height="250px" m="-20px 0 0 0">
-                <LineChart isDashboard={true} />
+                <RecentlyAddedBooks isDashboard={true} />
               </Box>
             </Box>
           </Grid>
