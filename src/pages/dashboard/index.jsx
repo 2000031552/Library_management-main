@@ -160,7 +160,7 @@ const Dashboard = () => {
                 justifyContent="space-between"
                 alignItems="center"
               >
-                <Box>
+                  <Box>
                   <Typography
                     variant="h5"
                     fontWeight="600"
