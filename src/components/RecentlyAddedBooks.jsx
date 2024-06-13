@@ -14,7 +14,7 @@ const sampleData = [
 const RecentlyAddedBooks = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  return (
+  return (      
     <Grid item xs={12}>
       <Box backgroundColor={colors.primary[400]} borderRadius="8px" overflow="hidden" padding="16px"> 
         <Box
