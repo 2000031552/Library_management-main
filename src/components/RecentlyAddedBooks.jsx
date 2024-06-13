@@ -24,7 +24,7 @@ const RecentlyAddedBooks = ({ isDashboard = false }) => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Typography
+          <Typography  
             variant="h5"
             fontWeight="600"
             color={colors.grey[100]}
