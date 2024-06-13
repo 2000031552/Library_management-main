@@ -21,6 +21,9 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
+import Contacts from "../contacts";
+
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -64,12 +67,11 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            borderRadius="8px"
           >
             <StatBox
               title="12,361"
               subtitle="Members"
-              progress="0.75"
-              increase="+14%"
               icon={
                 <GroupIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -85,12 +87,11 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            borderRadius="8px"
           >
             <StatBox
               title="431,225"
               subtitle="Available books"
-              progress="0.50"
-              increase="+21%"
               icon={
                 <BookIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -106,12 +107,11 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            borderRadius="8px"
           >
             <StatBox
               title="32,441"
               subtitle="New users"
-              progress="0.30"
-              increase="+5%"
               icon={
                 <PersonAddIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -127,12 +127,11 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            borderRadius="8px"
           >
             <StatBox
               title="1,325,134"
-              subtitle="Requests"
-              progress="0.80"
-              increase="+43%"
+              subtitle="Amount to be collected"
               icon={
                 <RequestQuoteOutlinedIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -151,7 +150,7 @@ const Dashboard = () => {
           rowSpacing={1}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         >
-          <Grid xs={12}>
+         <Grid xs={12} borderRadius="8px" >
             <Box backgroundColor={colors.primary[400]}>
               <Box
                 mt="25px"
@@ -160,37 +159,15 @@ const Dashboard = () => {
                 justifyContent="space-between"
                 alignItems="center"
               >
-                  <Box>
-                  <Typography
-                    variant="h5"
-                    fontWeight="600"
-                    color={colors.grey[100]}
-                  >
-                    Revenue Generated
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    fontWeight="600"
-                    color={colors.greenAccent[500]}
-                  >
-                    $58,373,698
-                  </Typography>
-                </Box>
-                <Box>
-                  <IconButton>
-                    <DownloadOutlinedIcon
-                      sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
-                    />
-                  </IconButton>
-                </Box>
               </Box>
               <Box height="250px" m="-20px 0 0 0">
-                <RecentlyAddedBooks isDashboard={true} />
+              <RecentlyAddedBooks isDashboard={true} /> 
               </Box>
             </Box>
           </Grid>
-          <Grid xs={12} sm={12} md={6}>
-            <Box backgroundColor={colors.primary[400]} p="30px">
+
+          <Grid xs={12} sm={12} md={6}  >
+            <Box backgroundColor={colors.primary[400]} p="30px" borderRadius="8px">
               <Typography variant="h5" fontWeight="600">
                 Campaign
               </Typography>
@@ -214,8 +191,9 @@ const Dashboard = () => {
               </Box>
             </Box>
           </Grid>
+          
           <Grid xs={12} sm={12} md={6}>
-            <Box backgroundColor={colors.primary[400]}>
+            <Box backgroundColor={colors.primary[400]} borderRadius="8px">
               <Typography
                 variant="h5"
                 fontWeight="600"
@@ -228,20 +206,7 @@ const Dashboard = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid xs={12}>
-            <Box backgroundColor={colors.primary[400]} padding="30px">
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ marginBottom: "15px" }}
-              >
-                Geography Based Traffic
-              </Typography>
-              <Box height="200px">
-                <GeographyChart isDashboard={true} />
-              </Box>
-            </Box>
-          </Grid>
+          
         </Grid>
         <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
           <Box
@@ -249,6 +214,7 @@ const Dashboard = () => {
             maxHeight="100vh"
             overflow="auto"
             m="25px 0 0 0"
+            borderRadius="8px"
           >
             <Box
               display="flex"
