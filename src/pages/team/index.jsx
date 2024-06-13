@@ -20,11 +20,11 @@ const Team = () => {
       cellClassName: "name-column--cell",
     },
     
-    { field: "email", headerName: "Email", width: 200 },
+    { field: "email", headerName: "Email", width: 300 },
     {
       field: "access",
       headerName: "Access Level",
-      width: 100,
+      width: 200,
       renderCell: ({ row: { access } }) => {
         return (
           <Box
@@ -54,11 +54,13 @@ const Team = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="All Members" subtitle="welcome!" />
+        <Header title="Members" subtitle="Total Members In DataBase" />
       </Box>
       <Box
         m="8px 0 0 0"
         height="80vh"
+        display="flex"
+        borderRadius="8px"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",

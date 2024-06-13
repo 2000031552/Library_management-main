@@ -12,22 +12,22 @@ const Contacts = () => {
   const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "Id", width: 100 },
-    { field: "ISBN", headerName: "ISBN", width: 100 },
+    { field: "ISBN", headerName: "ISBN", width: 150 },
     {
       field: "name",
       headerName: "BookTitle",
       cellClassName: "name-column--cell",
-      width: 150,
+      width: 200,
     },
-    { field: "author", headerName: "Author", width: 100 },
-    { field: "genre", headerName: "Genre", width: 100 },
-    { field: "publisheddate", headerName: "PublishedDate", width: 100,type: date },
-    
+    { field: "author", headerName: "Author", width: 200 },
+    { field: "genre", headerName: "Genre", width: 150 },
+    { field: "publisheddate", headerName: "PublishedDate", width: 150,type: date },
+    { field: "copies", headerName: "Copies", width: 150 },
   ];
   return (
     <Box m="16px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="Books" subtitle="welcome!" />
+        <Header title="Books" subtitle="Total Books Data" />
       </Box>
       <Box
         m="8px 0 0 0"
