@@ -11,7 +11,7 @@ import Invoices from "./pages/invoices";
 import Contacts from "./pages/contacts";
 import Form from "./pages/form";
 import Calendar from "./pages/calendar";
-
+import Profile from './pages/profile'; 
 import FAQ from "./pages/faq";
 
 
@@ -28,6 +28,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/change-password" element={<ChangePassword />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />

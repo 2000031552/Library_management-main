@@ -15,7 +15,7 @@ const ChangePassword = () => {
   };
 
   return (
-    <Box wt= {2} p={2} display="flex" flexDirection="column" alignItems="left">
+    <Box wt= {2} p={2} display="flex" flexDirection="column" justifyContent= "center" alignItems={"center"}>
       <Typography variant="h4" mb={2}>
         Change Password
       </Typography>
@@ -26,6 +26,8 @@ const ChangePassword = () => {
         onChange={handlePasswordChange}
         fullWidth
         margin="normal"
+        
+        style={{ width: '400px' }}
       />
       <TextField
         label="Confirm Password"
@@ -34,6 +36,8 @@ const ChangePassword = () => {
         onChange={handlePasswordChange}
         fullWidth
         margin="normal"
+         
+        style={{ width: '400px' }}
       />
       <Button variant="contained" color="secondary" onClick={handleSubmit} sx={{ mt: 2 }}>
         Change Password

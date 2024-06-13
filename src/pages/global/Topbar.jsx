@@ -29,7 +29,12 @@ const Topbar = () => {
     navigate("/change-password");
     handleMenuClose();
   }
+  const handleProfileClick = () => {
+    navigate("/profile");
+    handleMenuClose();
+  };
 
+ 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box display="flex">
@@ -85,7 +90,7 @@ const Topbar = () => {
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+        <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
         <MenuItem onClick={handleChangePasswordClick}>Change Password</MenuItem>
         
         <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
