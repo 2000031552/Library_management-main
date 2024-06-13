@@ -46,10 +46,17 @@ const Topbar = () => {
             <MenuOutlinedIcon />
           </IconButton>
         )}
+        </Box>
+        <Box
+        display="flex"
+        flexGrow={1}
+        justifyContent="right"
+        alignItems="right"
+      >
         <Box
           display="flex"
           backgroundColor={colors.primary[400]}
-          p={0.2}
+          p={0.2}         
           borderRadius={1}
         >
           <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search" />
