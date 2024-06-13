@@ -16,26 +16,22 @@ const Form = () => {
         lastName: "",
         email: "",
         contact: "",
-        address1: "",
-        address2: "",
+        password: "",
     };
     const checkoutSchema = yup.object().shape({
-        firstName:yup.string().required("Required"),
-        lastName:yup.string().required("Required"),
-        email:yup.string().email("Invalid email!").required("Required"),
-        contact:yup.string().matches(phoneRegExp, "phone number is not valid!").required("Required"),
-        address1:yup.string().required("Required"),
-        address2:yup.string().required("Required"),
-
+        firstName: yup.string().required("Required"),
+        lastName: yup.string().required("Required"),
+        email: yup.string().email("Invalid email!").required("Required"),
+        contact: yup.string().matches(phoneRegExp, "Phone number is not valid!").required("Required"),
+        password: yup.string().required("Required"),
     })
-
 
     return (
         <Box m="20px">
-          <Header title="CREATE USER" subtitle="Create a New User Profile" />
+          <Header title="CREATE ADMIN" subtitle="Create a New Admin Profile" />
     
           <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={checkoutSchema}>
-            {({ values, errors, touched, handleBlur, handleChange, handleSubmit,}) => (
+            {({ values, errors, touched, handleBlur, handleChange, handleSubmit, }) => (
               <form onSubmit={handleSubmit}>
                 <Box
                   display="grid"
@@ -100,33 +96,20 @@ const Form = () => {
                   <TextField
                     fullWidth
                     variant="filled"
-                    type="text"
-                    label="Address 1"
+                    type="password"
+                    label="Password"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    value={values.address1}
-                    name="address1"
-                    error={!!touched.address1 && !!errors.address1}
-                    helperText={touched.address1 && errors.address1}
-                    sx={{ gridColumn: "span 4" }}
-                  />
-                  <TextField
-                    fullWidth
-                    variant="filled"
-                    type="text"
-                    label="Address 2"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    value={values.address2}
-                    name="address2"
-                    error={!!touched.address2 && !!errors.address2}
-                    helperText={touched.address2 && errors.address2}
+                    value={values.password}
+                    name="password"
+                    error={!!touched.password && !!errors.password}
+                    helperText={touched.password && errors.password}
                     sx={{ gridColumn: "span 4" }}
                   />
                 </Box>
-                <Box display="flex" justifyContent="end" mt="20px">
+                <Box display="flex" justifyContent="center" mt="20px">
                   <Button type="submit" color="secondary" variant="contained">
-                    Create New User
+                    Create Admin
                   </Button>
                 </Box>
               </form>
@@ -136,4 +119,4 @@ const Form = () => {
       );
 }
 
-export default Form
+export default Form;
