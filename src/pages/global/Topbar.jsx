@@ -14,7 +14,7 @@ import { useProSidebar } from "react-pro-sidebar";
 const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const colorMode = useContext(ColorModeContext);
+  const colorMode =  useContext(ColorModeContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const { toggleSidebar, broken, rtl } = useProSidebar();
   const navigate = useNavigate();
