@@ -1,8 +1,11 @@
-import React from "react";
-import { Box, useTheme } from "@mui/material";
+import React from 'react';
+import { useContext,useState } from "react";
+import { Box, useTheme , Button } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
+
+import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header";
 import { date } from "yup";
@@ -24,10 +27,26 @@ const Contacts = () => {
     { field: "publisheddate", headerName: "PublishedDate", width: 150,type: date },
     { field: "copies", headerName: "Copies", width: 150 },
   ];
+  const navigate = useNavigate();
+  const handleAddbook = () => {
+    navigate("/addbook");
+    
+  }
+
   return (
     <Box m="16px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="Books" subtitle="Total Books Data" />
+        <Button
+        variant="contained"
+        color="secondary"
+        size="large"
+        style={{ borderRadius: '7px' }}  // Adjust the borderRadius to achieve a rounded square effect
+         onClick={handleAddbook}
+        >
+        Add Book
+        </Button>
+        
       </Box>
       <Box
         m="8px 0 0 0"
