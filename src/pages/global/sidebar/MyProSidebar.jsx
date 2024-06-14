@@ -216,7 +216,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="FAQ Page"
+              title="Requests"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}

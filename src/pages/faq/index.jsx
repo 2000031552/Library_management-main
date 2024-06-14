@@ -1,25 +1,28 @@
 import React from 'react';
-import { Box, useTheme, Typography, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
+import { Box, useTheme, Typography, Table, TableHead, TableRow, TableCell, TableBody, Button } from '@mui/material';
 import Header from '../../components/Header';
 import { tokens } from '../../theme';
 
 const sampleData = [
-  { requestId: 1, userId: 101, bookTitle: 'The Great Gatsby', author: 'F. Scott Fitzgerald', publishedDate: '1925' },
-  { requestId: 2, userId: 102, bookTitle: '1984', author: 'George Orwell', publishedDate: '1949' },
-  { requestId: 3, userId: 103, bookTitle: 'To Kill a Mockingbird', author: 'Harper Lee', publishedDate: '1960' },
-  { requestId: 4, userId: 104, bookTitle: 'Pride and Prejudice', author: 'Jane Austen', publishedDate: '1813' },
-  { requestId: 5, userId: 105, bookTitle: 'The Catcher in the Rye', author: 'J.D. Salinger', publishedDate: '1951' },
-  { requestId: 6, userId: 106, bookTitle: 'Moby-Dick', author: 'Herman Melville', publishedDate: '1851' },
-  { requestId: 7, userId: 107, bookTitle: 'War and Peace', author: 'Leo Tolstoy', publishedDate: '1869' },
-  { requestId: 8, userId: 108, bookTitle: 'The Odyssey', author: 'Homer', publishedDate: '8th century BC' },
-  { requestId: 9, userId: 109, bookTitle: 'Crime and Punishment', author: 'Fyodor Dostoevsky', publishedDate: '1866' },
-  { requestId: 10, userId: 110, bookTitle: 'The Brothers Karamazov', author: 'Fyodor Dostoevsky', publishedDate: '1880' },
+  { requestId: 1, userId: 101, bookTitle: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
+  { requestId: 2, userId: 102, bookTitle: '1984', author: 'George Orwell'  },
+  { requestId: 3, userId: 103, bookTitle: 'To Kill a Mockingbird', author: 'Harper Lee'  },
+  { requestId: 4, userId: 104, bookTitle: 'Pride and Prejudice', author: 'Jane Austen'  },
+  { requestId: 5, userId: 105, bookTitle: 'The Catcher in the Rye', author: 'J.D. Salinger'  },
+  { requestId: 6, userId: 106, bookTitle: 'Moby-Dick', author: 'Herman Melville'  },
+  { requestId: 7, userId: 107, bookTitle: 'War and Peace', author: 'Leo Tolstoy'  },
+  { requestId: 8, userId: 108, bookTitle: 'The Odyssey', author: 'Homer'  },
+  { requestId: 9, userId: 109, bookTitle: 'Crime and Punishment', author: 'Fyodor Dostoevsky'  },
+  { requestId: 10, userId: 110, bookTitle: 'The Brothers Karamazov', author: 'Fyodor Dostoevsky'  },
 ];
 
 const FAQ = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  const handleApprove = (requestId) => {
+    // Handle the approve action here
+    console.log(`Request ${requestId} approved`);
+  };
   return (
     <Box m="20px">
       <Header title="Requests" subtitle="Total " />
@@ -31,7 +34,7 @@ const FAQ = () => {
               <TableCell style={{ color: colors.grey[100] }}>User ID</TableCell>
               <TableCell style={{ color: colors.grey[100] }}>Book Title</TableCell>
               <TableCell style={{ color: colors.grey[100] }}>Author</TableCell>
-              <TableCell style={{ color: colors.grey[100] }}>Published Date</TableCell>
+              <TableCell style={{ color: colors.grey[100] }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -41,7 +44,15 @@ const FAQ = () => {
                 <TableCell>{request.userId}</TableCell>
                 <TableCell>{request.bookTitle}</TableCell>
                 <TableCell>{request.author}</TableCell>
-                <TableCell>{request.publishedDate}</TableCell>
+                <TableCell>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => handleApprove(request.requestId)}
+                  >
+                    Approve
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
