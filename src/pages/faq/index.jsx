@@ -22,7 +22,7 @@ const FAQ = () => {
 
   return (
     <Box m="20px">
-      <Header title="Requests" subtitle="Total Requests From Users" />
+      <Header title="Requests" subtitle="Total " />
       <Box mt="25px" p="20px" backgroundColor={colors.primary[400]} borderRadius="8px">
         <Table>
           <TableHead>

@@ -1,8 +1,10 @@
 // src/pages/ChangePassword.jsx
 import React, { useState } from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 const ChangePassword = () => {
+  const isNonMobile = useMediaQuery("(min-width:600px)");
   const [password, setPassword] = useState("");
 
   const handlePasswordChange = (event) => {

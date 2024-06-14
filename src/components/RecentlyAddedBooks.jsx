@@ -16,7 +16,7 @@ const RecentlyAddedBooks = ({ isDashboard = false }) => {
   const colors = tokens(theme.palette.mode);
   return (      
     <Grid item xs={12}>
-      <Box backgroundColor={colors.primary[400]} borderRadius="8px" overflow="hidden" padding="16px"> 
+      <Box backgroundColor={colors.primary[400]} borderRadius="12px" overflow="hidden" padding="16px"> 
         <Box
           mt="15px"
           p="0 30px"
