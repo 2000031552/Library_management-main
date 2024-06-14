@@ -18,23 +18,23 @@ const Invoices = () => {
       width: 200,
       cellClassName: "name-column--cell",
     },
-    { field: "email", headerName: "Email", width: 200 },
-    { field: "phone", headerName: "Phone Number", width: 100 },
+    { field: "email", headerName: "Email", width: 300 },
+    { field: "phone", headerName: "Phone Number", width: 200 },
 
     {
-      field: "cost",
-      headerName: "Cost",
-      width: 100,
+      field: "finedue",
+      headerName: "Fine Due",
+      width: 150,
       renderCell: ({ row: { cost } }) => {
-        return <Typography color={colors.greenAccent[500]}>${cost}</Typography>;
+        return <Typography color={colors.greenAccent[500]}>₹{cost}</Typography>;
       },
     },
-    { field: "date", headerName: "Date", width: 100 },
+    { field: "date", headerName: "Date", width: 150 },
   ];
   return (
-    <Box m="20px">
+    <Box m="15px" >
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="INVOICES" subtitle="welcome to you Invoices" />
+        <Header title="Fine Due" subtitle="Total Fine Data" />
       </Box>
       <Box
         m="8px 0 0 0"

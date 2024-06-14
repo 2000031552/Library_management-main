@@ -166,7 +166,7 @@ const Dashboard = () => {
             </Box>
           </Grid>
 
-          <Grid xs={12} sm={12} md={6}  >
+          <Grid xs={12} sm={12} md={6} >
             <Box backgroundColor={colors.primary[400]} p="30px" borderRadius="8px">
               <Typography variant="h5" fontWeight="600">
                 Campaign
@@ -229,7 +229,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Resent Transaction
+                Requests
               </Typography>
             </Box>
             {mockTransactions.map((transaction, i) => {

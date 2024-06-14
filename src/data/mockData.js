@@ -83,119 +83,169 @@ export const mockDataContacts = [
     author : "J K Rowling",
     publisheddate : "03/12/2022",
     genre:"Lifestyle",
-    ISBN: 123512,
-    copies:30
+    ISBN: 123512
   },
   {
     id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    age: 42,
-    phone: "(421)314-2288",
-    address: "1234 Main Street, New York, NY 10001",
-    city: "New York",
-    zipCode: "13151",
-    registrarId: 123512
+    name: "Frodo Baggins",
+    author: "J.R.R. Tolkien",
+    publisheddate: "07/29/1954",
+    genre: "Fantasy",
+    ISBN: 9780261102217
   },
   {
     id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    age: 45,
-    phone: "(422)982-6739",
-    address: "3333 Want Blvd, Estanza, NAY 42125",
-    city: "New York",
-    zipCode: "87281",
-    registrarId: 4132513
+    name: "Hermione Granger",
+    author: "J.K. Rowling",
+    publisheddate: "06/26/1997",
+    genre: "Fantasy",
+    ISBN: 9780747532743
   },
   {
     id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    age: 16,
-    phone: "(921)425-6742",
-    address: "1514 Main Street, New York, NY 22298",
-    city: "New York",
-    zipCode: "15551",
-    registrarId: 123512
+    name: "Albus Dumbledore",
+    author: "J.K. Rowling",
+    publisheddate: "07/08/1999",
+    genre: "Fantasy",
+    ISBN: 9780747546290
   },
   {
     id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    age: 31,
-    phone: "(421)445-1189",
-    address: "11122 Welping Ave, Tenting, CD 21321",
-    city: "Tenting",
-    zipCode: "14215",
-    registrarId: 123512
+    name: "Katniss Everdeen",
+    author: "Suzanne Collins",
+    publisheddate: "09/14/2008",
+    genre: "Dystopian",
+    ISBN: 9780439023481
   },
   {
     id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    age: 150,
-    phone: "(232)545-6483",
-    address: "1234 Canvile Street, Esvazark, NY 10001",
-    city: "Esvazark",
-    zipCode: "10001",
-    registrarId: 123512
+    name: "Peeta Mellark",
+    author: "Suzanne Collins",
+    publisheddate: "09/01/2009",
+    genre: "Dystopian",
+    ISBN: 9780439023498
   },
   {
     id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    age: 44,
-    phone: "(543)124-0123",
-    address: "22215 Super Street, Everting, ZO 515234",
-    city: "Evertin",
-    zipCode: "51523",
-    registrarId: 123512
+    name: "Jon Snow",
+    author: "George R.R. Martin",
+    publisheddate: "08/06/1996",
+    genre: "Fantasy",
+    ISBN: 9780553103540
   },
   {
     id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    age: 36,
-    phone: "(222)444-5555",
-    address: "4123 Ever Blvd, Wentington, AD 142213",
-    city: "Esteras",
-    zipCode: "44215",
-    registrarId: 512315
+    name: "Arya Stark",
+    author: "George R.R. Martin",
+    publisheddate: "11/16/1998",
+    genre: "Fantasy",
+    ISBN: 9780553579901
   },
   {
     id: 9,
-    name: "Harvey Roxie",
-    email: "harveyroxie@gmail.com",
-    age: 65,
-    phone: "(444)555-6239",
-    address: "51234 Avery Street, Cantory, ND 212412",
-    city: "Colunza",
-    zipCode: "111234",
-    registrarId: 928397
+    name: "Samwise Gamgee",
+    author: "J.R.R. Tolkien",
+    publisheddate: "10/20/1955",
+    genre: "Fantasy",
+    ISBN: 9780618002255
   },
   {
     id: 10,
-    name: "Enteri Redack",
-    email: "enteriredack@gmail.com",
-    age: 42,
-    phone: "(222)444-5555",
-    address: "4123 Easer Blvd, Wentington, AD 142213",
-    city: "Esteras",
-    zipCode: "44215",
-    registrarId: 533215
+    name: "Gandalf",
+    author: "J.R.R. Tolkien",
+    publisheddate: "11/02/1955",
+    genre: "Fantasy",
+    ISBN: 9780618002231
   },
   {
     id: 11,
-    name: "Steve Goodman",
-    email: "stevegoodmane@gmail.com",
-    age: 11,
-    phone: "(444)555-6239",
-    address: "51234 Fiveton Street, CunFory, ND 212412",
-    city: "Colunza",
-    zipCode: "1234",
-    registrarId: 92197
+    name: "Gollum",
+    author: "J.R.R. Tolkien",
+    publisheddate: "10/20/1955",
+    genre: "Fantasy",
+    ISBN: 9780618002248
+  },
+  {
+    id: 12,
+    name: "Bella Swan",
+    author: "Stephenie Meyer",
+    publisheddate: "10/05/2005",
+    genre: "Romance",
+    ISBN: 9780316015844
+  },
+  {
+    id: 13,
+    name: "Edward Cullen",
+    author: "Stephenie Meyer",
+    publisheddate: "09/06/2006",
+    genre: "Romance",
+    ISBN: 9780316015845
+  },
+  {
+    id: 14,
+    name: "Jacob Black",
+    author: "Stephenie Meyer",
+    publisheddate: "08/02/2007",
+    genre: "Romance",
+    ISBN: 9780316015846
+  },
+  {
+    id: 15,
+    name: "Harry Dresden",
+    author: "Jim Butcher",
+    publisheddate: "04/01/2000",
+    genre: "Urban Fantasy",
+    ISBN: 9780451457813
+  },
+  {
+    id: 16,
+    name: "Thomas Raith",
+    author: "Jim Butcher",
+    publisheddate: "12/01/2004",
+    genre: "Urban Fantasy",
+    ISBN: 9780451457814
+  },
+  {
+    id: 17,
+    name: "Molly Carpenter",
+    author: "Jim Butcher",
+    publisheddate: "04/04/2006",
+    genre: "Urban Fantasy",
+    ISBN: 9780451457815
+  },
+  {
+    id: 18,
+    name: "Percy Jackson",
+    author: "Rick Riordan",
+    publisheddate: "06/28/2005",
+    genre: "Fantasy",
+    ISBN: 9780786856299
+  },
+  {
+    id: 19,
+    name: "Annabeth Chase",
+    author: "Rick Riordan",
+    publisheddate: "06/03/2008",
+    genre: "Fantasy",
+    ISBN: 9781423103349
+  },
+  {
+    id: 20,
+    name: "Grover Underwood",
+    author: "Rick Riordan",
+    publisheddate: "05/05/2009",
+    genre: "Fantasy",
+    ISBN: 9781423101475
+  },
+  {
+    id: 21,
+    name: "Thalia Grace",
+    author: "Rick Riordan",
+    publisheddate: "09/24/2010",
+    genre: "Fantasy",
+    ISBN: 9781423113492
   }
+
 ];
 
 export const mockDataInvoices = [
