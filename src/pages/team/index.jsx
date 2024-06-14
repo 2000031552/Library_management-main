@@ -5,7 +5,9 @@ import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import Person3Icon from '@mui/icons-material/Person3';
+import SchoolIcon from '@mui/icons-material/School';
+
 import Header from "../../components/Header";
 
 const Team = () => {
@@ -41,8 +43,8 @@ const Team = () => {
             borderRadius="5px"
           >
             {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "staff" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
+            {access === "staff" && <Person3Icon />}
+            {access === "student" && <SchoolIcon />}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
               {access}
             </Typography>

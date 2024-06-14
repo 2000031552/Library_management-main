@@ -15,7 +15,7 @@ export const mockDataTeam = [
     email: "cerseilannister@gmail.com",
     age: 42,
     phone: "(421)314-2288",
-    access: "manager"
+    access: "staff"
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const mockDataTeam = [
     email: "jaimelannister@gmail.com",
     age: 45,
     phone: "(422)982-6739",
-    access: "user"
+    access: "student"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const mockDataTeam = [
     email: "daenerystargaryen@gmail.com",
     age: 31,
     phone: "(421)445-1189",
-    access: "user"
+    access: "student"
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ export const mockDataTeam = [
     email: "evermelisandre@gmail.com",
     age: 150,
     phone: "(232)545-6483",
-    access: "manager"
+    access: "staff"
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ export const mockDataTeam = [
     email: "ferraraclifford@gmail.com",
     age: 44,
     phone: "(543)124-0123",
-    access: "user"
+    access: "student"
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ export const mockDataTeam = [
     email: "rossinifrances@gmail.com",
     age: 36,
     phone: "(222)444-5555",
-    access: "user"
+    access: "student"
   },
   {
     id: 9,
@@ -83,7 +83,8 @@ export const mockDataContacts = [
     author : "J K Rowling",
     publisheddate : "03/12/2022",
     genre:"Lifestyle",
-    ISBN: 123512
+    ISBN: 123512,
+    copies:30
   },
   {
     id: 2,
