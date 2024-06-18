@@ -151,7 +151,7 @@ const Dashboard = () => {
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         >
          <Grid xs={12} borderRadius="8px" >
-            <Box backgroundColor={colors.primary[400]}>
+            <Box backgroundColor={colors.primary[400]} >
               <Box
                 mt="25px"
                 p="0 30px"
