@@ -41,7 +41,7 @@ const Bookstatus = () => {
   return (
     <Box m="16px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="Books" subtitle="Books status Data" />
+        <Header title="Status"/>
         
         
       </Box>

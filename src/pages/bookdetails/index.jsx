@@ -15,14 +15,14 @@ const BookDetails = () => {
 const theme = useTheme();
 const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "Id" },
-    { field: "userid", headerName: "User ID" },
-    { field: "username", headerName: "Username" },
-    { field: "ISBN", headerName: "ISBN" },
+    { field: "id", headerName: "Id", width: 100 },
+    { field: "userid", headerName: "User ID", width: 150 },
+    { field: "username", headerName: "Username", width: 150 },
+    { field: "ISBN", headerName: "ISBN", width: 150 },
     
-    { field: "borroweddate", headerName: "Borrowed Date" },
-    { field: "returndate", headerName: "Return Date" },
-    { field: "status", headerName: "Status" }
+    { field: "borroweddate", headerName: "Borrowed Date", width: 150 },
+    { field: "returndate", headerName: "Return Date", width: 150 },
+    { field: "status", headerName: "Status" , width: 150}
   ];
 
   return (

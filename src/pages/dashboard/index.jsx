@@ -12,7 +12,7 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import BookIcon from '@mui/icons-material/Book';
 import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
- 
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import GroupIcon from '@mui/icons-material/Group';
 import Header from "../../components/Header";
 import RecentlyAddedBooks from "../../components/RecentlyAddedBooks";
@@ -109,9 +109,9 @@ const Dashboard = () => {
           >
             <StatBox
               title="3,8767"
-              subtitle="Books Browed"
+              subtitle="Books Borrowed"
               icon={
-                <PersonAddIcon
+                <LocalLibraryIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
