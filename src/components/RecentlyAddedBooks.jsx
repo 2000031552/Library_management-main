@@ -9,6 +9,8 @@ const sampleData = [
   { id: 3, title: 'To Kill a Mockingbird', author: 'Harper Lee' },
   { id: 4, title: 'Pride and Prejudice', author: 'Jane Austen' },
   { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger' },
+  { id: 6, title: 'The Catcher in the Rye', author: 'J.D. Salinger' },
+  { id: 7, title: 'The Catcher in the Rye', author: 'J.D. Salinger' },
 ];
 
 const RecentlyAddedBooks = ({ isDashboard = false }) => {
@@ -16,13 +18,13 @@ const RecentlyAddedBooks = ({ isDashboard = false }) => {
   const colors = tokens(theme.palette.mode);
   return (      
     <Grid item xs={12}>
-      <Box backgroundColor={colors.primary[400]} borderRadius="12px" overflow="hidden" padding="16px"> 
+      <Box backgroundColor={colors.primary[400]} borderRadius="12px" overflow="hidden" padding="16px" > 
         <Box
-          mt="15px"
-          p="0 30px"
+          mt="8px"
+          //p="0 30px"
           display="flex"
           justifyContent="space-between"
-          alignItems="center"
+          alignItems="start"
         >
           <Typography  
             variant="h5"
@@ -32,10 +34,10 @@ const RecentlyAddedBooks = ({ isDashboard = false }) => {
             Recently added books
           </Typography>
         </Box>
-        <Box height="250px" m="-20px 0 0 0" overflow="auto" mt="20px">
+        <Box height="450px" m="-20px 0 0 0" overflow="auto" mt="20px">
           <Table sx={{ borderCollapse: 'separate', borderSpacing: '1', border: `1px solid ${colors.grey[300]}`, borderRadius: '8px' }}>
             <TableHead>
-              <TableRow>
+              <TableRow style={{ backgroundColor: colors.blueAccent[700] }}>
                 <TableCell sx={{ borderTopLeftRadius: '8px' }}>Book ID</TableCell>
                 <TableCell>Title</TableCell>
                 <TableCell sx={{ borderTopRightRadius: '8px' }}>Author</TableCell>

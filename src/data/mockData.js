@@ -316,54 +316,18 @@ export const mockDataInvoices = [
 ];
 
 export const mockTransactions = [
-  {
-    txId: "01e4dsa",
-    user: "johndoe",
-    date: "2021-09-01",
-    cost: "43.95"
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45"
-  },
-  {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95"
-  },
-  {
-    txId: "51034szv",
-    user: "goodmanave",
-    date: "2022-11-05",
-    cost: "200.95"
-  },
-  {
-    txId: "0a123sb",
-    user: "stevebower",
-    date: "2022-11-02",
-    cost: "13.55"
-  },
-  {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95"
-  },
-  {
-    txId: "120s51a",
-    user: "wootzifer",
-    date: "2019-04-15",
-    cost: "24.20"
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45"
-  }
+ 
+    { requestId: 1, userId: 101, bookTitle: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
+    { requestId: 2, userId: 102, bookTitle: '1984', author: 'George Orwell'  },
+    { requestId: 3, userId: 103, bookTitle: 'To Kill a Mockingbird', author: 'Harper Lee'  },
+    { requestId: 4, userId: 104, bookTitle: 'Pride and Prejudice', author: 'Jane Austen'  },
+    { requestId: 5, userId: 105, bookTitle: 'The Catcher in the Rye', author: 'J.D. Salinger'  },
+    { requestId: 6, userId: 106, bookTitle: 'Moby-Dick', author: 'Herman Melville'  },
+    { requestId: 7, userId: 107, bookTitle: 'War and Peace', author: 'Leo Tolstoy'  },
+    { requestId: 8, userId: 108, bookTitle: 'The Odyssey', author: 'Homer'  },
+    { requestId: 9, userId: 109, bookTitle: 'Crime and Punishment', author: 'Fyodor Dostoevsky'  },
+    { requestId: 10, userId: 110, bookTitle: 'The Brothers Karamazov', author: 'Fyodor Dostoevsky'  },
+  
 ];
 
 export const mockBarData = [
