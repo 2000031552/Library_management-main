@@ -16,7 +16,7 @@ import FAQ from "./pages/faq";
 import AddBook from "./pages/addbook";
 import BookDetails from './pages/bookdetails';
 import Bookstatus from "./pages/bookstatus";
-
+ 
 const App = () => {
   const [theme, colorMode] = useMode();
   return (
@@ -40,7 +40,8 @@ const App = () => {
                 <Route path="/addbook" element={<AddBook />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
-                 
+                {/* <Route path="/user/dashboard" element={<SDashboard />} /> */}
+               
                 
               </Routes>
             </main>

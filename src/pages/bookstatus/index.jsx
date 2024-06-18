@@ -13,7 +13,7 @@ import Header from "../../components/Header";
 const Bookstatus = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-   
+  const navigate = useNavigate();    
 
   const handleCellClick = (params) => {
     if (params.field === 'name') {
@@ -35,7 +35,7 @@ const Bookstatus = () => {
     { field: "overduecount", headerName: "Overduecount", width: 150 }
     
   ];
-  const navigate = useNavigate();
+
    
 
   return (
