@@ -14,8 +14,8 @@ import Calendar from "./pages/calendar";
 import Profile from './pages/profile'; 
 import FAQ from "./pages/faq";
 import AddBook from "./pages/addbook";
-
-
+import BookDetails from './pages/bookdetails';
+import Bookstatus from "./pages/bookstatus";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -33,12 +33,14 @@ const App = () => {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/bookstatus" element={<Bookstatus />} />
+                <Route path="/bookdetails/:id" element={<BookDetails />} />
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/addbook" element={<AddBook />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/calendar" element={<Calendar />} />
-                
+                 
                 
               </Routes>
             </main>

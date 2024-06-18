@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  IconButton,
   Typography,
   useTheme,
   useMediaQuery,
@@ -12,23 +11,31 @@ import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import BookIcon from '@mui/icons-material/Book';
 import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+ 
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import GroupIcon from '@mui/icons-material/Group';
 import Header from "../../components/Header";
 import RecentlyAddedBooks from "../../components/RecentlyAddedBooks";
-import GeographyChart from "../../components/GeographyChart";
+ 
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-import { Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
-import Contacts from "../contacts";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Dashboard = () => {
   const theme = useTheme();
   const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
+
+  const handleMembersClick = () => {
+    navigate('/team');
+  };
+  const handleBooksClick = () => {
+    navigate('/contacts');
+  };
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -68,6 +75,8 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             borderRadius="8px"
+            onClick={handleMembersClick}
+            sx={{ cursor: 'pointer' }}
           >
             <StatBox
               title="12,361"
@@ -88,6 +97,8 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             borderRadius="8px"
+            onClick={handleBooksClick}
+            sx={{ cursor: 'pointer' }}
           >
             <StatBox
               title="431,225"
@@ -111,9 +122,9 @@ const Dashboard = () => {
           >
             <StatBox
               title="3,8767"
-              subtitle="Books Browed"
+              subtitle="Books Borrowed"
               icon={
-                <PersonAddIcon
+                <LocalLibraryIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }

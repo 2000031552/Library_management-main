@@ -1,52 +1,35 @@
 import React from 'react';
-import { useContext,useState } from "react";
-import { Box, useTheme , Button } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+// import { useParams } from 'react-router-dom';
+import { Box, useTheme } from '@mui/material';
+import { mockDataBookdetails } from '../../data/mockData';
 import { tokens } from "../../theme";
-import { mockDataContacts } from "../../data/mockData";
-
-import { useNavigate } from "react-router-dom";
-
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "../../components/Header";
-import { date } from "yup";
+const BookDetails = () => {
+//   const { id } = useParams();
+//   const book = mockDataBookdetails.find((book) => book.id === parseInt(id));
 
-const Contacts = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+//   if (!book) {
+//     return <Typography variant="h5">Book not found</Typography>;
+//   }
+const theme = useTheme();
+const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "Id", width: 100 },
+    { field: "userid", headerName: "User ID", width: 150 },
+    { field: "username", headerName: "Username", width: 150 },
     { field: "ISBN", headerName: "ISBN", width: 150 },
-    {
-      field: "name",
-      headerName: "BookTitle",
-      cellClassName: "name-column--cell",
-      width: 200,
-    },
-    { field: "author", headerName: "Author", width: 200 },
-    { field: "genre", headerName: "Genre", width: 150 },
-    { field: "publisheddate", headerName: "PublishedDate", width: 150,type: date },
-    { field: "available", headerName: "Available copies", width: 150 }
     
+    { field: "borroweddate", headerName: "Borrowed Date", width: 150 },
+    { field: "returndate", headerName: "Return Date", width: 150 },
+    { field: "status", headerName: "Status" , width: 150}
   ];
-  const navigate = useNavigate();
-  const handleAddbook = () => {
-    navigate("/addbook");
-    
-  }
 
   return (
     <Box m="16px">
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="Books" subtitle="Total Books Data" />
-        <Button
-        variant="contained"
-        color="secondary"
-        size="large"
-        style={{ borderRadius: '7px' }}  // Adjust the borderRadius to achieve a rounded square effect
-         onClick={handleAddbook}
-        >
-        Add Book
-        </Button>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Header title="Status" />
+        
         
       </Box>
       <Box
@@ -82,14 +65,15 @@ const Contacts = () => {
           },
         }}
       >
-        <DataGrid
-          rows={mockDataContacts}
+      <DataGrid
+          rows={mockDataBookdetails}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
+           
         />
-      </Box>
+    </Box>
     </Box>
   );
 };
 
-export default Contacts;
+export default BookDetails;
