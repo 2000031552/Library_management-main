@@ -26,7 +26,7 @@ const FAQ = () => {
   return (
     <Box m="20px">
       <Header title="Requests" subtitle="Total " />
-      <Box mt="25px" p="20px" backgroundColor={colors.primary[400]} borderRadius="8px">
+      <Box mt="18px" p="20px" backgroundColor={colors.primary[400]} borderRadius="8px">
         <Table>
           <TableHead>
             <TableRow style={{ backgroundColor: colors.blueAccent[700] }}>
