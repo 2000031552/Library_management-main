@@ -83,7 +83,10 @@ export const mockDataContacts = [
     author : "J K Rowling",
     publisheddate : "03/12/2022",
     genre:"Lifestyle",
-    ISBN: 123512
+    ISBN: 123512,
+    borrowedcount:20,
+    overduecount:5,
+    available:100
   },
   {
     id: 2,
@@ -247,7 +250,28 @@ export const mockDataContacts = [
   }
 
 ];
-
+export const mockDataBookdetails = [
+  {
+    id: 1,
+    userid: 101,
+    username: 'Keerthi',
+    ISBN: '123512',
+     
+    borroweddate: '2023-01-15',
+    returndate: '2023-02-15',
+    status: 'Borrowed'
+  },
+  {
+    id: 2,
+    userid: 102,
+    username: 'Ganesh',
+    ISBN: '9780261102217',
+     
+    borroweddate: '2023-01-15',
+    returndate: '2023-02-15',
+    status: 'Returned'
+  }
+  ]
 export const mockDataInvoices = [
   {
     id: 1,

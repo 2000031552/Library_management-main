@@ -17,6 +17,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SwitchRightOutlinedIcon from "@mui/icons-material/SwitchRightOutlined";
 import SwitchLeftOutlinedIcon from "@mui/icons-material/SwitchLeftOutlined";
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -181,6 +182,13 @@ const MyProSidebar = () => {
               title="Books"
               to="/contacts"
               icon={<LibraryBooksIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Bookstatus"
+              to="/bookstatus"
+              icon={<MenuBookIcon />}
               selected={selected}
               setSelected={setSelected}
             />

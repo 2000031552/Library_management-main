@@ -8,11 +8,18 @@ import { mockDataContacts } from "../../data/mockData";
 import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header";
-import { date } from "yup";
+// import { date } from "yup";
 
-const Contacts = () => {
+const Bookstatus = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+   
+
+  const handleCellClick = (params) => {
+    if (params.field === 'name') {
+      navigate(`/bookdetails/${params.id}`);
+    }
+  };
   const columns = [
     { field: "id", headerName: "Id", width: 100 },
     { field: "ISBN", headerName: "ISBN", width: 150 },
@@ -24,29 +31,18 @@ const Contacts = () => {
     },
     { field: "author", headerName: "Author", width: 200 },
     { field: "genre", headerName: "Genre", width: 150 },
-    { field: "publisheddate", headerName: "PublishedDate", width: 150,type: date },
-    { field: "available", headerName: "Available copies", width: 150 }
+    { field: "borrowedcount", headerName: "Borrowedcount", width: 150 },
+    { field: "overduecount", headerName: "Overduecount", width: 150 }
     
   ];
   const navigate = useNavigate();
-  const handleAddbook = () => {
-    navigate("/addbook");
-    
-  }
+   
 
   return (
     <Box m="16px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="Books" subtitle="Total Books Data" />
-        <Button
-        variant="contained"
-        color="secondary"
-        size="large"
-        style={{ borderRadius: '7px' }}  // Adjust the borderRadius to achieve a rounded square effect
-         onClick={handleAddbook}
-        >
-        Add Book
-        </Button>
+        <Header title="Books" subtitle="Books status Data" />
+        
         
       </Box>
       <Box
@@ -86,10 +82,11 @@ const Contacts = () => {
           rows={mockDataContacts}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
+          onCellClick={handleCellClick}
         />
       </Box>
     </Box>
   );
 };
 
-export default Contacts;
+export default Bookstatus;

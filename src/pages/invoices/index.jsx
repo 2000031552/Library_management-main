@@ -29,7 +29,7 @@ const Invoices = () => {
         return <Typography color={colors.greenAccent[500]}>₹{cost}</Typography>;
       },
     },
-    { field: "date", headerName: "Date", width: 150 },
+    { field: "date", headerName: "Expected Returndate", width: 150 },
   ];
   return (
     <Box m="15px" >

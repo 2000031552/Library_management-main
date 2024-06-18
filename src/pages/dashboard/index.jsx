@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  IconButton,
   Typography,
   useTheme,
   useMediaQuery,
@@ -13,16 +12,15 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import BookIcon from '@mui/icons-material/Book';
 import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+ 
 import GroupIcon from '@mui/icons-material/Group';
 import Header from "../../components/Header";
 import RecentlyAddedBooks from "../../components/RecentlyAddedBooks";
-import GeographyChart from "../../components/GeographyChart";
+ 
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-import { Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
-import Contacts from "../contacts";
+ 
 
 
 const Dashboard = () => {
