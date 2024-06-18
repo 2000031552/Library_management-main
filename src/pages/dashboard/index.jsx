@@ -51,7 +51,7 @@ const Dashboard = () => {
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
+            Reports
           </Button>
         </Box>
       </Box>
@@ -108,8 +108,8 @@ const Dashboard = () => {
             borderRadius="8px"
           >
             <StatBox
-              title="32,441"
-              subtitle="New users"
+              title="3,8767"
+              subtitle="Books Browed"
               icon={
                 <PersonAddIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -158,7 +158,7 @@ const Dashboard = () => {
                 alignItems="center"
               >
               </Box>
-              <Box height="250px" m="-20px 0 0 0">
+              <Box height="500px" m="-20px 0 0 0">
               <RecentlyAddedBooks isDashboard={true} /> 
               </Box>
             </Box>
@@ -246,19 +246,27 @@ const Dashboard = () => {
                       fontWeight="600"
                       color={colors.greenAccent[100]}
                     >
-                      {transaction.txId}
+                      {transaction.requestId}
                     </Typography>
-                    <Typography color={colors.grey[100]}>
-                      {transaction.user}
+                    <Typography color={colors.grey[100]} alignContent="center"> 
+                      {transaction.bookTitle}
                     </Typography>
                   </Box>
-                  <Box color={colors.grey[100]}>{transaction.date}</Box>
                   <Box
                     color={colors.greenAccent[500]}
                     p="5px 10px"
                     borderRadius="4px"
+                    alignContent="left"
                   >
-                    ${transaction.cost}
+                    {transaction.author}
+                  </Box>
+                   
+                  <Box
+                    
+                    p="5px 10px"
+                    borderRadius="4px"
+                  >
+                    {transaction.userId}
                   </Box>
                 </Box>
               );
